@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wanderlist — Destinations — Code & Preview</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <style type="text/css">
+        body {
+            background-color: #f1f5f9;
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            margin: 0;
+            padding: 20px;
+            color: #1f2937;
+        }
+        .container { max-width: 1100px; margin: 0 auto; }
+
+        /* VS Code Source Code Window */
+        .vscode-window { background-color: #1e1e1e; border-radius: 8px; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3); overflow: hidden; margin-bottom: 30px; border: 1px solid #333; }
+        .vscode-header { background-color: #252526; color: #cccccc; padding: 0 15px; font-size: 0.85em; border-bottom: 1px solid #333; display: flex; align-items: center; justify-content: space-between; height: 35px; }
+        .vscode-tabs { display: flex; height: 100%; }
+        .vscode-tab { background-color: #1e1e1e; padding: 0 15px; color: white; display: flex; align-items: center; gap: 8px; font-family: 'Inter', sans-serif; font-size: 12px; border-top: 1px solid #007acc; cursor: pointer; }
+        .vscode-content { margin: 0; padding: 24px; color: #d4d4d4; overflow-x: auto; font-family: 'Consolas', 'Monaco', 'Courier New', monospace; font-size: 14px; line-height: 1.5; white-space: pre; }
+        
+        .syn-tag { color: #569cd6; }       /* Blue */
+        .syn-attr { color: #9cdcfe; }      /* Light Blue */
+        .syn-string { color: #ce9178; }    /* Orange */
+        .syn-selector { color: #d7ba7d; }  /* Yellow */
+        .syn-prop { color: #9cdcfe; }      /* Light Blue */
+        .syn-val { color: #ce9178; }       /* Orange */
+        .syn-unit { color: #b5cea8; }      /* Light Green */
+
+        /* VS Code Live Preview Window */
+        .preview-section { margin-top: 40px; }
+        .preview-label { font-weight: bold; font-size: 1.1em; color: #1f2937; margin-bottom: 12px; display: flex; align-items: center; gap: 10px; }
+        
+        .preview-toolbar { background-color: #252526; padding: 8px 15px; display: flex; align-items: center; border-bottom: 1px solid #333; }
+        .preview-address-bar { background-color: #3c3c3c; color: #cccccc; padding: 5px 12px; border-radius: 4px; font-family: 'Inter', sans-serif; font-size: 12px; flex-grow: 1; margin-left: 15px; display: flex; align-items: center; gap: 8px; }
+        
+        .browser-preview { background-color: #ffffff; position: relative; width: 100%; min-height: 400px; overflow: hidden; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="vscode-window">
+        <div class="vscode-header">
+            <div class="vscode-tabs"><div class="vscode-tab">📄 destinations.html</div></div>
+            <div style="opacity: 0.5; color: #cccccc;">● ○ ◍</div>
+        </div>
+        <pre class="vscode-content">&lt;<span class="syn-tag">!DOCTYPE</span> <span class="syn-attr">html</span>&gt;
+&lt;<span class="syn-tag">html</span>  <span class="syn-attr">lang</span>=<span class="syn-string">&quot;en&quot;</span>&gt;
+
+&lt;<span class="syn-tag">head</span>&gt;
+  &lt;<span class="syn-tag">meta</span>  <span class="syn-attr">charset</span>=<span class="syn-string">&quot;UTF-8&quot;</span>  /&gt;
+  &lt;<span class="syn-tag">meta</span>  <span class="syn-attr">name</span>=<span class="syn-string">&quot;viewport&quot;</span>  <span class="syn-attr">content</span>=<span class="syn-string">&quot;width=device-width, initial-scale=1.0&quot;</span>  /&gt;
+  &lt;<span class="syn-tag">title</span>&gt;Wanderlist — Destinations&lt;/<span class="syn-tag">title</span>&gt;
+
+  &lt;<span class="syn-tag">link</span>  <span class="syn-attr">rel</span>=<span class="syn-string">&quot;preconnect&quot;</span>  <span class="syn-attr">href</span>=<span class="syn-string">&quot;https://fonts.googleapis.com&quot;</span>&gt;
+  &lt;<span class="syn-tag">link</span>  <span class="syn-attr">rel</span>=<span class="syn-string">&quot;preconnect&quot;</span>  <span class="syn-attr">href</span>=<span class="syn-string">&quot;https://fonts.gstatic.com&quot;</span> crossorigin&gt;
+  &lt;<span class="syn-tag">link</span>  <span class="syn-attr">href</span>=<span class="syn-string">&quot;https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Syne:wght@600;700;800&amp;display=swap&quot;</span>
+     <span class="syn-attr">rel</span>=<span class="syn-string">&quot;stylesheet&quot;</span>&gt;
+
+  &lt;<span class="syn-tag">script</span>  <span class="syn-attr">src</span>=<span class="syn-string">&quot;https://cdn.tailwindcss.com&quot;</span>&gt;&lt;/<span class="syn-tag">script</span>&gt;
+
+  &lt;<span class="syn-tag">link</span>  <span class="syn-attr">rel</span>=<span class="syn-string">&quot;stylesheet&quot;</span>  <span class="syn-attr">href</span>=<span class="syn-string">&quot;css/style.css&quot;</span>  /&gt;
+&lt;/<span class="syn-tag">head</span>&gt;
+
+&lt;<span class="syn-tag">body</span>  <span class="syn-attr">class</span>=<span class="syn-string">&quot;bg-surface text-neutral-900 antialiased selection:bg-accent selection:text-white&quot;</span>&gt;
+
+  &lt;<span class="syn-tag">div</span>  <span class="syn-attr">class</span>=<span class="syn-string">&quot;max-w-8xl mx-auto px-6 md:px-12&quot;</span>&gt;
+
+    <span style="color: #6a9955; font-style: italic;">&lt;!-- Navbar !copy and paste from index.html --&gt;</span>
+    &lt;<span class="syn-tag">nav</span>  <span class="syn-attr">class</span>=<span class="syn-string">&quot;flex items-center justify-between py-8&quot;</span>&gt;
+      &lt;<span class="syn-tag">a</span>  <span class="syn-attr">href</span>=<span class="syn-string">&quot;index.html&quot;</span>  <span class="syn-attr">class</span>=<span class="syn-string">&quot;font-display font-bold text-2xl tracking-tight flex items-center gap-1&quot;</span>&gt;
+        Wander&lt;<span class="syn-tag">span</span>  <span class="syn-attr">class</span>=<span class="syn-string">&quot;text-accent&quot;</span>&gt;list&lt;/<span class="syn-tag">span</span>&gt;
+      &lt;/<span class="syn-tag">a</span>&gt;
+
+      &lt;<span class="syn-tag">div</span>  <span class="syn-attr">class</span>=<span class="syn-string">&quot;hidden md:flex items-center gap-8 text-sm font-medium&quot;</span>&gt;
+        &lt;<span class="syn-tag">a</span>  <span class="syn-attr">href</span>=<span class="syn-string">&quot;index.html&quot;</span>  <span class="syn-attr">class</span>=<span class="syn-string">&quot;nav-link text-neutral-500 hover:text-neutral-900&quot;</span>&gt;Home&lt;/<span class="syn-tag">a</span>&gt;
+        &lt;<span class="syn-tag">a</span>  <span class="syn-attr">href</span>=<span class="syn-string">&quot;destinations.html&quot;</span>  <span class="syn-attr">class</span>=<span class="syn-string">&quot;nav-link active&quot;</span>&gt;Destinations&lt;/<span class="syn-tag">a</span>&gt;
+        &lt;<span class="syn-tag">a</span>  <span class="syn-attr">href</span>=<span class="syn-string">&quot;gallery.html&quot;</span>  <span class="syn-attr">class</span>=<span class="syn-string">&quot;nav-link text-neutral-500 hover:text-neutral-900&quot;</span>&gt;Gallery&lt;/<span class="syn-tag">a</span>&gt;
+      &lt;/<span class="syn-tag">div</span>&gt;
+    &lt;/<span class="syn-tag">nav</span>&gt;
+
+    <span style="color: #6a9955; font-style: italic;">&lt;!-- Page Header --&gt;</span>
+    &lt;<span class="syn-tag">header</span>  <span class="syn-attr">class</span>=<span class="syn-string">&quot;py-16 md:py-24 max-w-2xl&quot;</span>&gt;
+      &lt;<span class="syn-tag">h1</span>  <span class="syn-attr">class</span>=<span class="syn-string">&quot;font-display font-extrabold text-5xl md:text-6xl tracking-tight text-neutral-950 mb-6&quot;</span>&gt;The Destinations
+      &lt;/<span class="syn-tag">h1</span>&gt;
+      &lt;<span class="syn-tag">p</span>  <span class="syn-attr">class</span>=<span class="syn-string">&quot;text-neutral-600 text-lg leading-relaxed&quot;</span>&gt;Three places worth putting on your list. From the emerald rice
+        terraces of Indonesia to the historic streets of Paris, find the location that calls to you.&lt;/<span class="syn-tag">p</span>&gt;
+    &lt;/<span class="syn-tag">header</span>&gt;
+
+    <span style="color: #6a9955; font-style: italic;">&lt;!-- Destinations List (Large Editorial Cards) --&gt;</span>
+    &lt;<span class="syn-tag">section</span>  <span class="syn-attr">class</span>=<span class="syn-string">&quot;flex flex-col gap-24 pb-24 border-t border-neutral-200 pt-16&quot;</span>&gt;
+
+      <span style="color: #6a9955; font-style: italic;">&lt;!-- Destination 1 --&gt;</span>
+      &lt;<span class="syn-tag">article</span>  <span class="syn-attr">class</span>=<span class="syn-string">&quot;group&quot;</span>&gt;
+        &lt;<span class="syn-tag">div</span>  <span class="syn-attr">class</span>=<span class="syn-string">&quot;w-full h-[40vh] md:h-[60vh] overflow-hidden bg-neutral-200 mb-8 zoom-wrapper&quot;</span>&gt;
+          &lt;<span class="syn-tag">img</span>  <span class="syn-attr">src</span>=<span class="syn-string">&quot;images/paris-destination.jpg&quot;</span>  <span class="syn-attr">alt</span>=<span class="syn-string">&quot;Eiffel Tower in Paris at sunset&quot;</span>
+             <span class="syn-attr">class</span>=<span class="syn-string">&quot;w-full h-full object-cover&quot;</span>  /&gt;
+        &lt;/<span class="syn-tag">div</span>&gt;
+        &lt;<span class="syn-tag">div</span>  <span class="syn-attr">class</span>=<span class="syn-string">&quot;grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-12&quot;</span>&gt;
+          &lt;<span class="syn-tag">div</span>  <span class="syn-attr">class</span>=<span class="syn-string">&quot;md:col-span-5&quot;</span>&gt;
+            &lt;<span class="syn-tag">h2</span>  <span class="syn-attr">class</span>=<span class="syn-string">&quot;font-display text-4xl font-bold mb-2&quot;</span>&gt;Paris&lt;/<span class="syn-tag">h2</span>&gt;
+            &lt;<span class="syn-tag">div</span>  <span class="syn-attr">class</span>=<span class="syn-string">&quot;text-xs font-semibold tracking-wider text-neutral-400 uppercase&quot;</span>&gt;France&lt;/<span class="syn-tag">div</span>&gt;
+          &lt;/<span class="syn-tag">div</span>&gt;
+          &lt;<span class="syn-tag">div</span>  <span class="syn-attr">class</span>=<span class="syn-string">&quot;md:col-span-7 flex flex-col md:flex-row gap-6 md:gap-12 md:items-start justify-between&quot;</span>&gt;
+            &lt;<span class="syn-tag">p</span>  <span class="syn-attr">class</span>=<span class="syn-string">&quot;text-neutral-600 max-w-md text-sm leading-relaxed&quot;</span>&gt;Home to the Eiffel Tower, world-class museums,
+              and cozy riverside cafés. Best visited in spring when the city blooms. Whether it is your first time or
+              your tenth, Paris always finds a way to surprise you.&lt;/<span class="syn-tag">p</span>&gt;
+            &lt;<span class="syn-tag">a</span>  <span class="syn-attr">href</span>=<span class="syn-string">&quot;gallery.html&quot;</span>
+               <span class="syn-attr">class</span>=<span class="syn-string">&quot;inline-flex items-center text-xs font-bold uppercase tracking-wider text-accent hover:text-neutral-900&quot;</span>&gt;View
+              Photos &amp;rarr;&lt;/<span class="syn-tag">a</span>&gt;
+          &lt;/<span class="syn-tag">div</span>&gt;
+        &lt;/<span class="syn-tag">div</span>&gt;
+      &lt;/<span class="syn-tag">article</span>&gt;
+
+      <span style="color: #6a9955; font-style: italic;">&lt;!-- Destination 2 --&gt;</span>
+      &lt;<span class="syn-tag">article</span>  <span class="syn-attr">class</span>=<span class="syn-string">&quot;group&quot;</span>&gt;
+        &lt;<span class="syn-tag">div</span>  <span class="syn-attr">class</span>=<span class="syn-string">&quot;w-full h-[40vh] md:h-[60vh] overflow-hidden bg-neutral-200 mb-8 zoom-wrapper&quot;</span>&gt;
+          &lt;<span class="syn-tag">img</span>  <span class="syn-attr">src</span>=<span class="syn-string">&quot;images/bali-destination.jpg&quot;</span>  <span class="syn-attr">alt</span>=<span class="syn-string">&quot;Tropical beach in Bali&quot;</span>  <span class="syn-attr">class</span>=<span class="syn-string">&quot;w-full h-full object-cover&quot;</span>  /&gt;
+        &lt;/<span class="syn-tag">div</span>&gt;
+        &lt;<span class="syn-tag">div</span>  <span class="syn-attr">class</span>=<span class="syn-string">&quot;grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-12&quot;</span>&gt;
+          &lt;<span class="syn-tag">div</span>  <span class="syn-attr">class</span>=<span class="syn-string">&quot;md:col-span-5&quot;</span>&gt;
+            &lt;<span class="syn-tag">h2</span>  <span class="syn-attr">class</span>=<span class="syn-string">&quot;font-display text-4xl font-bold mb-2&quot;</span>&gt;Bali&lt;/<span class="syn-tag">h2</span>&gt;
+            &lt;<span class="syn-tag">div</span>  <span class="syn-attr">class</span>=<span class="syn-string">&quot;text-xs font-semibold tracking-wider text-neutral-400 uppercase&quot;</span>&gt;Indonesia&lt;/<span class="syn-tag">div</span>&gt;
+          &lt;/<span class="syn-tag">div</span>&gt;
+          &lt;<span class="syn-tag">div</span>  <span class="syn-attr">class</span>=<span class="syn-string">&quot;md:col-span-7 flex flex-col md:flex-row gap-6 md:gap-12 md:items-start justify-between&quot;</span>&gt;
+            &lt;<span class="syn-tag">p</span>  <span class="syn-attr">class</span>=<span class="syn-string">&quot;text-neutral-600 max-w-md text-sm leading-relaxed&quot;</span>&gt;Emerald rice terraces, warm turquoise water,
+              and a laid-back island pace that's hard to leave behind. A haven for those seeking both adventure and
+              profound stillness.&lt;/<span class="syn-tag">p</span>&gt;
+            &lt;<span class="syn-tag">a</span>  <span class="syn-attr">href</span>=<span class="syn-string">&quot;gallery.html&quot;</span>
+               <span class="syn-attr">class</span>=<span class="syn-string">&quot;inline-flex items-center text-xs font-bold uppercase tracking-wider text-accent hover:text-neutral-900&quot;</span>&gt;View
+              Photos &amp;rarr;&lt;/<span class="syn-tag">a</span>&gt;
+          &lt;/<span class="syn-tag">div</span>&gt;
+        &lt;/<span class="syn-tag">div</span>&gt;
+      &lt;/<span class="syn-tag">article</span>&gt;
+
+      <span style="color: #6a9955; font-style: italic;">&lt;!-- Destination 3 --&gt;</span>
+      &lt;<span class="syn-tag">article</span>  <span class="syn-attr">class</span>=<span class="syn-string">&quot;group&quot;</span>&gt;
+        &lt;<span class="syn-tag">div</span>  <span class="syn-attr">class</span>=<span class="syn-string">&quot;w-full h-[40vh] md:h-[60vh] overflow-hidden bg-neutral-200 mb-8 zoom-wrapper&quot;</span>&gt;
+          &lt;<span class="syn-tag">img</span>  <span class="syn-attr">src</span>=<span class="syn-string">&quot;images/kyoto-destination.jpg&quot;</span>  <span class="syn-attr">alt</span>=<span class="syn-string">&quot;Traditional temple in Kyoto&quot;</span>
+             <span class="syn-attr">class</span>=<span class="syn-string">&quot;w-full h-full object-cover&quot;</span>  /&gt;
+        &lt;/<span class="syn-tag">div</span>&gt;
+        &lt;<span class="syn-tag">div</span>  <span class="syn-attr">class</span>=<span class="syn-string">&quot;grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-12&quot;</span>&gt;
+          &lt;<span class="syn-tag">div</span>  <span class="syn-attr">class</span>=<span class="syn-string">&quot;md:col-span-5&quot;</span>&gt;
+            &lt;<span class="syn-tag">h2</span>  <span class="syn-attr">class</span>=<span class="syn-string">&quot;font-display text-4xl font-bold mb-2&quot;</span>&gt;Kyoto&lt;/<span class="syn-tag">h2</span>&gt;
+            &lt;<span class="syn-tag">div</span>  <span class="syn-attr">class</span>=<span class="syn-string">&quot;text-xs font-semibold tracking-wider text-neutral-400 uppercase&quot;</span>&gt;Japan&lt;/<span class="syn-tag">div</span>&gt;
+          &lt;/<span class="syn-tag">div</span>&gt;
+          &lt;<span class="syn-tag">div</span>  <span class="syn-attr">class</span>=<span class="syn-string">&quot;md:col-span-7 flex flex-col md:flex-row gap-6 md:gap-12 md:items-start justify-between&quot;</span>&gt;
+            &lt;<span class="syn-tag">p</span>  <span class="syn-attr">class</span>=<span class="syn-string">&quot;text-neutral-600 max-w-md text-sm leading-relaxed&quot;</span>&gt;Wander through ancient temples, quiet bamboo
+              groves, and streets lined with cherry blossoms in spring. A city where time slows down to match the rhythm
+              of nature.&lt;/<span class="syn-tag">p</span>&gt;
+            &lt;<span class="syn-tag">a</span>  <span class="syn-attr">href</span>=<span class="syn-string">&quot;gallery.html&quot;</span>
+               <span class="syn-attr">class</span>=<span class="syn-string">&quot;inline-flex items-center text-xs font-bold uppercase tracking-wider text-accent hover:text-neutral-900&quot;</span>&gt;View
+              Photos &amp;rarr;&lt;/<span class="syn-tag">a</span>&gt;
+          &lt;/<span class="syn-tag">div</span>&gt;
+        &lt;/<span class="syn-tag">div</span>&gt;
+      &lt;/<span class="syn-tag">article</span>&gt;
+
+    &lt;/<span class="syn-tag">section</span>&gt;
+
+    <span style="color: #6a9955; font-style: italic;">&lt;!-- Footer !copy and paste from index.html --&gt;</span>
+    &lt;<span class="syn-tag">footer</span>
+       <span class="syn-attr">class</span>=<span class="syn-string">&quot;py-12 border-t border-neutral-200 flex flex-col md:flex-row items-center justify-between text-xs text-neutral-500 gap-4&quot;</span>&gt;
+      &lt;<span class="syn-tag">p</span>&gt;&amp;copy; 2026 Wanderlist Travel Guide.&lt;/<span class="syn-tag">p</span>&gt;
+      &lt;<span class="syn-tag">div</span>  <span class="syn-attr">class</span>=<span class="syn-string">&quot;flex gap-6&quot;</span>&gt;
+        &lt;<span class="syn-tag">a</span>  <span class="syn-attr">href</span>=<span class="syn-string">&quot;index.html&quot;</span>  <span class="syn-attr">class</span>=<span class="syn-string">&quot;hover:text-neutral-900 transition-colors&quot;</span>&gt;Home&lt;/<span class="syn-tag">a</span>&gt;
+        &lt;<span class="syn-tag">a</span>  <span class="syn-attr">href</span>=<span class="syn-string">&quot;gallery.html&quot;</span>  <span class="syn-attr">class</span>=<span class="syn-string">&quot;hover:text-neutral-900 transition-colors&quot;</span>&gt;Gallery&lt;/<span class="syn-tag">a</span>&gt;
+      &lt;/<span class="syn-tag">div</span>&gt;
+    &lt;/<span class="syn-tag">footer</span>&gt;
+
+  &lt;/<span class="syn-tag">div</span>&gt;
+
+&lt;/<span class="syn-tag">body</span>&gt;
+
+&lt;/<span class="syn-tag">html</span>&gt;</pre>
+    </div>
+
+    <div class="preview-section">
+        <span class="preview-label">🌐 Browser Output (Live Preview)</span>
+        <div class="vscode-window" style="margin-bottom: 0;">
+            <div class="vscode-header">
+                <div class="vscode-tabs"><div class="vscode-tab">🌐 Simple Browser</div></div>
+                <div style="opacity: 0.5; color: #cccccc;">● ○ ◍</div>
+            </div>
+            <div class="preview-toolbar">
+                <span style="color: #cccccc; cursor: pointer; font-size: 16px;">↻</span>
+                <div class="preview-address-bar">
+                    <span>🔒</span> http://127.0.0.1:5500/destinations.html
+                </div>
+            </div>
+            <div class="browser-preview">
+                <div class="max-w-8xl mx-auto px-6 md:px-12">
+
+    <!-- Navbar !copy and paste from index.html -->
+    <nav class="flex items-center justify-between py-8">
+      <a href="index.html" class="font-display font-bold text-2xl tracking-tight flex items-center gap-1">
+        Wander<span class="text-accent">list</span>
+      </a>
+
+      <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+        <a href="index.html" class="nav-link text-neutral-500 hover:text-neutral-900">Home</a>
+        <a href="destinations.html" class="nav-link active">Destinations</a>
+        <a href="gallery.html" class="nav-link text-neutral-500 hover:text-neutral-900">Gallery</a>
+      </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="py-16 md:py-24 max-w-2xl">
+      <h1 class="font-display font-extrabold text-5xl md:text-6xl tracking-tight text-neutral-950 mb-6">The Destinations
+      </h1>
+      <p class="text-neutral-600 text-lg leading-relaxed">Three places worth putting on your list. From the emerald rice
+        terraces of Indonesia to the historic streets of Paris, find the location that calls to you.</p>
+    </header>
+
+    <!-- Destinations List (Large Editorial Cards) -->
+    <section class="flex flex-col gap-24 pb-24 border-t border-neutral-200 pt-16">
+
+      <!-- Destination 1 -->
+      <article class="group">
+        <div class="w-full h-[40vh] md:h-[60vh] overflow-hidden bg-neutral-200 mb-8 zoom-wrapper">
+          <img src="images/paris-destination.jpg" alt="Eiffel Tower in Paris at sunset"
+            class="w-full h-full object-cover" />
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-12">
+          <div class="md:col-span-5">
+            <h2 class="font-display text-4xl font-bold mb-2">Paris</h2>
+            <div class="text-xs font-semibold tracking-wider text-neutral-400 uppercase">France</div>
+          </div>
+          <div class="md:col-span-7 flex flex-col md:flex-row gap-6 md:gap-12 md:items-start justify-between">
+            <p class="text-neutral-600 max-w-md text-sm leading-relaxed">Home to the Eiffel Tower, world-class museums,
+              and cozy riverside cafés. Best visited in spring when the city blooms. Whether it is your first time or
+              your tenth, Paris always finds a way to surprise you.</p>
+            <a href="gallery.html"
+              class="inline-flex items-center text-xs font-bold uppercase tracking-wider text-accent hover:text-neutral-900">View
+              Photos &rarr;</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Destination 2 -->
+      <article class="group">
+        <div class="w-full h-[40vh] md:h-[60vh] overflow-hidden bg-neutral-200 mb-8 zoom-wrapper">
+          <img src="images/bali-destination.jpg" alt="Tropical beach in Bali" class="w-full h-full object-cover" />
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-12">
+          <div class="md:col-span-5">
+            <h2 class="font-display text-4xl font-bold mb-2">Bali</h2>
+            <div class="text-xs font-semibold tracking-wider text-neutral-400 uppercase">Indonesia</div>
+          </div>
+          <div class="md:col-span-7 flex flex-col md:flex-row gap-6 md:gap-12 md:items-start justify-between">
+            <p class="text-neutral-600 max-w-md text-sm leading-relaxed">Emerald rice terraces, warm turquoise water,
+              and a laid-back island pace that's hard to leave behind. A haven for those seeking both adventure and
+              profound stillness.</p>
+            <a href="gallery.html"
+              class="inline-flex items-center text-xs font-bold uppercase tracking-wider text-accent hover:text-neutral-900">View
+              Photos &rarr;</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Destination 3 -->
+      <article class="group">
+        <div class="w-full h-[40vh] md:h-[60vh] overflow-hidden bg-neutral-200 mb-8 zoom-wrapper">
+          <img src="images/kyoto-destination.jpg" alt="Traditional temple in Kyoto"
+            class="w-full h-full object-cover" />
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-12">
+          <div class="md:col-span-5">
+            <h2 class="font-display text-4xl font-bold mb-2">Kyoto</h2>
+            <div class="text-xs font-semibold tracking-wider text-neutral-400 uppercase">Japan</div>
+          </div>
+          <div class="md:col-span-7 flex flex-col md:flex-row gap-6 md:gap-12 md:items-start justify-between">
+            <p class="text-neutral-600 max-w-md text-sm leading-relaxed">Wander through ancient temples, quiet bamboo
+              groves, and streets lined with cherry blossoms in spring. A city where time slows down to match the rhythm
+              of nature.</p>
+            <a href="gallery.html"
+              class="inline-flex items-center text-xs font-bold uppercase tracking-wider text-accent hover:text-neutral-900">View
+              Photos &rarr;</a>
+          </div>
+        </div>
+      </article>
+
+    </section>
+
+    <!-- Footer !copy and paste from index.html -->
+    <footer
+      class="py-12 border-t border-neutral-200 flex flex-col md:flex-row items-center justify-between text-xs text-neutral-500 gap-4">
+      <p>&copy; 2026 Wanderlist Travel Guide.</p>
+      <div class="flex gap-6">
+        <a href="index.html" class="hover:text-neutral-900 transition-colors">Home</a>
+        <a href="gallery.html" class="hover:text-neutral-900 transition-colors">Gallery</a>
+      </div>
+    </footer>
+
+  </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

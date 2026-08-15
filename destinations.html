@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wanderlist — Destinations</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Syne:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body class="bg-surface text-neutral-900 antialiased selection:bg-accent selection:text-white">
+    <div class="max-w-8xl mx-auto px-6 md:px-12">
+
+      <!-- Navbar !copy and paste from index.html -->
+      <nav class="flex items-center justify-between py-8">
+        <a href="index.html" class="font-display font-bold text-2xl tracking-tight flex items-center gap-1">
+          Wander<span class="text-accent">list</span>
+        </a>
+        <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+          <a href="index.html" class="nav-link text-neutral-500 hover:text-neutral-900">Home</a>
+          <a href="destinations.html" class="nav-link active">Destinations</a>
+          <a href="gallery.html" class="nav-link text-neutral-500 hover:text-neutral-900">Gallery</a>
+        </div>
+      </nav>
+
+      <!-- Page Header -->
+      <header class="py-16 md:py-24 max-w-2xl">
+        <h1 class="font-display font-extrabold text-5xl md:text-6xl text-neutral-950 mb-6">
+          The Destinations
+        </h1>
+        <p class="text-neutral-600 text-lg">
+          Three places worth putting on your list. From the emerald rice terraces of Indonesia to the
+          historic streets of Paris, find the location that calls to you.
+        </p>
+      </header>
+
+      <!-- Destinations List (Large Editorial Cards) -->
+      <section class="flex flex-col gap-24 pb-24 border-t border-neutral-200 pt-16">
+
+        <!-- Destination 1 -->
+        <article>
+          <img src="images/paris-destination.jpg" alt="Eiffel Tower in Paris" class="w-full h-[40vh] md:h-[60vh] object-cover mb-8" />
+          <div class="flex flex-col md:flex-row gap-6 md:gap-12 md:items-start">
+            <div class="md:w-5/12">
+              <h2 class="font-display text-4xl font-bold mb-2">Paris</h2>
+              <span class="text-xs font-semibold tracking-wider text-neutral-400 uppercase">France</span>
+            </div>
+            <p class="md:w-5/12 text-neutral-600 text-sm leading-relaxed">
+              Home to the Eiffel Tower, world-class museums, and cozy riverside cafés. Best visited in
+              spring when the city blooms. Whether it is your first time or your tenth, Paris always
+              finds a way to surprise you.
+            </p>
+            <a href="gallery.html" class="md:w-2/12 text-xs font-bold uppercase tracking-wider text-accent hover:text-neutral-900">View Photos &rarr;</a>
+          </div>
+        </article>
+
+        <!-- Destination 2 -->
+        <article>
+          <img src="images/bali-destination.jpg" alt="Tropical beach in Bali" class="w-full h-[40vh] md:h-[60vh] object-cover mb-8" />
+          <div class="flex flex-col md:flex-row gap-6 md:gap-12 md:items-start">
+            <div class="md:w-5/12">
+              <h2 class="font-display text-4xl font-bold mb-2">Bali</h2>
+              <span class="text-xs font-semibold tracking-wider text-neutral-400 uppercase">Indonesia</span>
+            </div>
+            <p class="md:w-5/12 text-neutral-600 text-sm leading-relaxed">
+              Emerald rice terraces, warm turquoise water, and a laid-back island pace that's hard to
+              leave behind. A haven for those seeking both adventure and profound stillness.
+            </p>
+            <a href="gallery.html" class="md:w-2/12 text-xs font-bold uppercase tracking-wider text-accent hover:text-neutral-900">View Photos &rarr;</a>
+          </div>
+        </article>
+
+        <!-- Destination 3 -->
+        <article>
+          <img src="images/kyoto-destination.jpg" alt="Traditional temple in Kyoto" class="w-full h-[40vh] md:h-[60vh] object-cover mb-8" />
+          <div class="flex flex-col md:flex-row gap-6 md:gap-12 md:items-start">
+            <div class="md:w-5/12">
+              <h2 class="font-display text-4xl font-bold mb-2">Kyoto</h2>
+              <span class="text-xs font-semibold tracking-wider text-neutral-400 uppercase">Japan</span>
+            </div>
+            <p class="md:w-5/12 text-neutral-600 text-sm leading-relaxed">
+              Wander through ancient temples, quiet bamboo groves, and streets lined with cherry
+              blossoms in spring. A city where time slows down to match the rhythm of nature.
+            </p>
+            <a href="gallery.html" class="md:w-2/12 text-xs font-bold uppercase tracking-wider text-accent hover:text-neutral-900">View Photos &rarr;</a>
+          </div>
+        </article>
+
+      </section>
+
+      <!-- Footer !copy and paste from index.html -->
+      <footer class="py-12 border-t border-neutral-200 flex flex-col md:flex-row items-center justify-between text-xs text-neutral-500 gap-4">
+        <p>&copy; 2026 Wanderlist Travel Guide.</p>
+        <div class="flex gap-6">
+          <a href="index.html" class="hover:text-neutral-900 transition-colors">Home</a>
+          <a href="gallery.html" class="hover:text-neutral-900 transition-colors">Gallery</a>
+        </div>
+      </footer>
+
+    </div>
+  </body>
+</html>

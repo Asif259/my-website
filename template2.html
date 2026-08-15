@@ -1,0 +1,449 @@
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title></title>
+<link href="https://fonts.googleapis.com" rel="preconnect" />
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet" />
+<style type="text/css">/* --- RESET & BASE --- */
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #ffffff;
+            font-family: 'Inter', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #334155;
+        }
+
+        /* --- HEADER --- */
+        header {
+            background: #ffffff;
+            color: #1e293b;
+            padding: 50px 20px 30px;
+            text-align: center;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            font-weight: 800;
+            color: #50aae0;
+            letter-spacing: -0.5px;
+        }
+
+        header p {
+            font-size: 1.1em;
+            color: #64748b;
+            max-width: 700px;
+            margin: 15px auto 0;
+        }
+
+        /* --- DASHBOARD GRID --- */
+        .dashboard {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+            gap: 30px;
+        }
+
+        @media (max-width: 520px) {
+            .dashboard {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* --- CARD COMPONENT --- */
+        .card {
+            background-color: #f8fafc;
+            border: 1px solid #cbd5e1;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 25px -5px rgba(0, 0, 0, 0.1);
+            border-color: #94a3b8;
+        }
+
+        /* Content Area */
+        .card-content {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .card-header {
+            background-color: #f1f5f9;
+            padding: 15px 25px;
+            border-bottom: 1px solid #e2e8f0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .card-header h2 {
+            margin: 0;
+            font-size: 1.25em;
+            color: #1e293b;
+            font-weight: 700;
+        }
+
+        .icon-badge {
+            background-color: white;
+            padding: 8px;
+            border-radius: 8px;
+            font-size: 1.2em;
+            border: 1px solid #e2e8f0;
+            line-height: 1;
+        }
+
+        .card-body {
+            padding: 25px;
+            flex-grow: 1;
+        }
+
+        /* --- UTILITY CLASSES --- */
+        .full-width {
+            grid-column: 1 / -1;
+        }
+
+        .section-title {
+            grid-column: 1 / -1;
+            font-size: 1.5em;
+            font-weight: 700;
+            color: #1e293b;
+            margin-top: 20px;
+            margin-bottom: -10px;
+            padding-left: 10px;
+            border-left: 5px solid #50aae0;
+            line-height: 1.2;
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.75em;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+            letter-spacing: 0.5px;
+        }
+
+        .tag-blue {
+            background: #e0f2fe;
+            color: #0284c7;
+            border: 1px solid #bae6fd;
+        }
+
+        .tag-orange {
+            background: #ffedd5;
+            color: #c2410c;
+            border: 1px solid #fdba74;
+        }
+
+        .tag-green {
+            background: #dcfce7;
+            color: #16a34a;
+            border: 1px solid #bbf7d0;
+        }
+
+        .tag-purple {
+            background: #f3e8ff;
+            color: #9333ea;
+            border: 1px solid #d8b4fe;
+        }
+
+        ul,
+        ol {
+            padding-left: 20px;
+            margin: 0;
+            color: #475569;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        /* --- TABLE STYLES (Consolidated) --- */
+        .table-responsive {
+            overflow-x: auto;
+            margin-top: 15px;
+            padding-bottom: 5px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            background-color: #ffffff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+            min-width: 600px;
+        }
+
+        thead {
+            background-color: #5AA1E5;
+        }
+
+        thead th {
+            color: #fff;
+            padding: 14px 16px;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        tbody td {
+            padding: 14px 16px;
+            border-bottom: 1px solid #e6eaf0;
+            color: #475569;
+            vertical-align: top;
+        }
+
+        tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #f9fbff;
+        }
+
+        tbody tr:hover {
+            background-color: #eef6ff;
+        }
+
+        td code {
+            background: #f1f5f9;
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: #db2777;
+            font-family: monospace;
+        }
+
+        /* --- INNOVATION: PRODUCT CARD DEMO --- */
+        .demo-canvas {
+            background: #f1f5f9;
+            border: 2px dashed #cbd5e1;
+            border-radius: 8px;
+            padding: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+            position: relative;
+        }
+
+        .product-card {
+            background: white;
+            padding: 20px;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+            width: 260px;
+            text-align: center;
+            transition: transform 0.3s ease;
+            position: relative;
+            z-index: 2;
+        }
+
+        .product-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .pc-img {
+            width: 100%;
+            height: 140px;
+            background: #e2e8f0;
+            border-radius: 12px;
+            margin-bottom: 15px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .pc-img::after {
+            content: "Image";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #94a3b8;
+            font-weight: bold;
+        }
+
+        .pc-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin: 0;
+            color: #1e293b;
+        }
+
+        .pc-price {
+            color: #64748b;
+            font-size: 0.95rem;
+            margin: 5px 0 15px;
+        }
+
+        .pc-btn {
+            background: #2563eb;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+            transition: background 0.2s;
+        }
+
+        .pc-btn:hover {
+            background: #1d4ed8;
+        }
+
+        /* Annotation Lines */
+        .annotation {
+            position: absolute;
+            background: #fff;
+            border: 1px solid #3b82f6;
+            color: #2563eb;
+            padding: 4px 8px;
+            font-size: 0.75rem;
+            border-radius: 4px;
+            font-weight: 600;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            pointer-events: none;
+            z-index: 3;
+        }
+
+        .a-shadow {
+            bottom: 20px;
+            right: 20px;
+        }
+
+        .a-radius {
+            top: 20px;
+            left: 20px;
+        }
+
+        .a-flex {
+            top: -10px;
+            right: 40%;
+            background: #22c55e;
+            color: white;
+            border-color: #16a34a;
+        }
+</style>
+<header>
+<h1>Lesson Prep: Product Cards</h1>
+
+<p>Everything you need to know before we build a modern eCommerce card component.</p>
+</header>
+
+<div class="dashboard"><!-- Section 1: Prerequisites -->
+<div class="card full-width">
+<div class="card-content">
+<div class="card-header">
+<h2>Prerequisite Check</h2>
+<span class="icon-badge">✅</span></div>
+
+<div class="card-body"><span class="tag tag-blue">Skills Needed</span>
+
+<p>Before starting this lesson, ensure you are comfortable with:</p>
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 15px;">
+<div style="background: #f0fdf4; border: 1px solid #86efac; padding: 10px; border-radius: 6px; display: flex; align-items: center; gap: 10px; color: #166534; font-weight: 600;"><span>✔</span> Basic HTML Tags</div>
+
+<div style="background: #f0fdf4; border: 1px solid #86efac; padding: 10px; border-radius: 6px; display: flex; align-items: center; gap: 10px; color: #166534; font-weight: 600;"><span>✔</span> CSS Box Model</div>
+
+<div style="background: #f0fdf4; border: 1px solid #86efac; padding: 10px; border-radius: 6px; display: flex; align-items: center; gap: 10px; color: #166534; font-weight: 600;"><span>✔</span> Flexbox Basics</div>
+
+<div style="background: #f0fdf4; border: 1px solid #86efac; padding: 10px; border-radius: 6px; display: flex; align-items: center; gap: 10px; color: #166534; font-weight: 600;"><span>✔</span> Linking CSS Files</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Section 2: Concepts Demo -->
+
+<div class="section-title">What We Will Build</div>
+
+<div class="card full-width">
+<div class="card-content">
+<div class="card-header">
+<h2>The Product Card</h2>
+<span class="icon-badge">🛍️</span></div>
+
+<div class="card-body"><span class="tag tag-purple">Interactive Demo</span>
+
+<p>Hover over the card below to see the <strong>hover effects</strong> and smooth transitions we will implement.</p>
+<!-- Innovation: Interactive Visual Demo -->
+
+<div class="demo-canvas"><span class="annotation a-radius">Border Radius: 16px</span> <span class="annotation a-shadow">Box Shadow</span> <span class="annotation a-flex">Flexbox Container</span>
+
+<div class="product-card">
+<div class="pc-img">&nbsp;</div>
+
+<h3 class="pc-title">Wireless Headphones</h3>
+
+<p class="pc-price">$199.00</p>
+<button class="pc-btn">Add to Cart</button></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Section 3: Concepts Summary -->
+
+<div class="card full-width">
+<div class="card-content">
+<div class="card-header">
+<h2>Key Concepts</h2>
+<span class="icon-badge">🔑</span></div>
+
+<div class="card-body">
+<div class="table-responsive">
+<table>
+	<thead>
+		<tr>
+			<th>Concept</th>
+			<th>Role in Design</th>
+			<th>CSS Property</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><strong>Flexbox</strong></td>
+			<td>Layout: Centers content inside the card</td>
+			<td><code>display: flex</code>, <code>align-items</code></td>
+		</tr>
+		<tr>
+			<td><strong>Border Radius</strong></td>
+			<td>Style: Rounds the corners for a modern look</td>
+			<td><code>border-radius: 16px</code></td>
+		</tr>
+		<tr>
+			<td><strong>Box Shadow</strong></td>
+			<td>Depth: Lifts the card off the page</td>
+			<td><code>box-shadow</code></td>
+		</tr>
+		<tr>
+			<td><strong>Micro-Interactions</strong></td>
+			<td>UX: Button color change and lift on mouseover</td>
+			<td><code>:hover</code>, <code>transform</code></td>
+		</tr>
+	</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>

@@ -1,0 +1,261 @@
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title></title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Fira+Code:wght@400;500&amp;display=swap" rel="stylesheet" />
+<style type="text/css">body {
+            background-color: #fff;
+            font-family: 'Inter', sans-serif;
+            color: #334155;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: #ffffff;
+            color: #1e293b;
+            padding: 50px 20px 30px;
+            text-align: center;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            font-weight: 800;
+            color: #50aae0;
+            letter-spacing: -0.5px;
+        }
+
+        header p {
+            font-size: 1.1em;
+            color: #64748b;
+            max-width: 700px;
+            margin: 15px auto 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px 40px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 25px;
+        }
+
+        .topic-card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+            border: 1px solid #e2e8f0;
+            transition: transform 0.2s;
+        }
+
+        .topic-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-header {
+            background: #fffbeb;
+            /* Amber tint */
+            padding: 15px 20px;
+            border-bottom: 1px solid #fcd34d;
+            font-weight: 700;
+            color: #92400e;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .card-body {
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .full-width {
+            grid-column: 1 / -1;
+        }
+
+        /* VS Code Style Block */
+        .vscode-block {
+            background: #1e1e1e;
+            color: #d4d4d4;
+            padding: 15px;
+            border-radius: 8px;
+            font-family: 'Fira Code', monospace;
+            font-size: 0.9em;
+            overflow-x: auto;
+            border: 1px solid #333;
+            margin-top: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        .keyword {
+            color: #569cd6;
+        }
+
+        .variable {
+            color: #9cdcfe;
+        }
+
+        .number {
+            color: #b5cea8;
+        }
+
+        .operator {
+            color: #d4d4d4;
+        }
+
+        .comment {
+            color: #6a9955;
+            font-style: italic;
+        }
+
+        .string {
+            color: #ce9178;
+        }
+
+        /* Calculator Visual */
+        .calc-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            background: #1e293b;
+            padding: 20px;
+            border-radius: 12px;
+            max-width: 300px;
+            margin: 0 auto;
+        }
+
+        .calc-key {
+            background: #334155;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            border-radius: 6px;
+            font-family: 'Fira Code', monospace;
+            font-weight: bold;
+            box-shadow: 0 2px 0 #0f172a;
+        }
+
+        .calc-op {
+            background: #fbbf24;
+            color: #78350f;
+        }
+</style>
+<header>
+<h1>Operators</h1>
+
+<p>Crunching numbers, logic, and strings together.</p>
+</header>
+
+<div class="container"><!-- Arithmetic -->
+<div class="topic-card">
+<div class="card-header">Math Machine</div>
+
+<div class="card-body">
+<div class="calc-grid">
+<div class="calc-key">7</div>
+
+<div class="calc-key">8</div>
+
+<div class="calc-key">9</div>
+
+<div class="calc-key calc-op">/</div>
+
+<div class="calc-key">4</div>
+
+<div class="calc-key">5</div>
+
+<div class="calc-key">6</div>
+
+<div class="calc-key calc-op">*</div>
+
+<div class="calc-key">1</div>
+
+<div class="calc-key">2</div>
+
+<div class="calc-key">3</div>
+
+<div class="calc-key calc-op">-</div>
+
+<div class="calc-key">0</div>
+
+<div class="calc-key">.</div>
+
+<div class="calc-key">=</div>
+
+<div class="calc-key calc-op">+</div>
+</div>
+
+<div class="vscode-block mt-4"><span class="comment">// Modulo (Remainder)</span><br />
+<span class="number">10</span> <span class="operator">%</span> <span class="number">3</span>; <span class="comment">// 1</span><br />
+<br />
+<span class="comment">// Increment</span><br />
+<span class="variable">score</span>++; <span class="comment">// +1</span><br />
+<span class="variable">score</span> += <span class="number">5</span>; <span class="comment">// +5</span></div>
+</div>
+</div>
+<!-- Coercion -->
+
+<div class="topic-card">
+<div class="card-header">Type Coercion (The Trap)</div>
+
+<div class="card-body">
+<p>JS tries to &quot;guess&quot; types. This is dangerous. Always use strict equality <code>===</code>.</p>
+
+<div class="vscode-block"><span class="comment">// Loose Equality (Bad)</span><br />
+<span class="string">&quot;5&quot;</span> == <span class="number">5</span>; <span class="comment">// true (Wait, what?)</span><br />
+<br />
+<span class="comment">// Strict Equality (Good)</span><br />
+<span class="string">&quot;5&quot;</span> === <span class="number">5</span>; <span class="comment">// false (Different types)</span></div>
+
+<div class="p-3 bg-red-50 border border-red-200 mt-3 rounded text-sm text-red-800">Always use <code>===</code> unless you have a very good reason not to.</div>
+</div>
+</div>
+<!-- Ternary -->
+
+<div class="topic-card full-width">
+<div class="card-header">The Ternary Operator</div>
+
+<div class="card-body">
+<p>A shortcut for <code>if-else</code>.</p>
+
+<div class="vscode-block"><span class="keyword">let</span> <span class="variable">status</span> = <span class="variable">isLoggedIn</span> ? <span class="string">&quot;Welcome&quot;</span> : <span class="string">&quot;Login&quot;</span>;</div>
+</div>
+</div>
+<!-- Truthy/Falsy -->
+
+<div class="topic-card full-width">
+<div class="card-header">Truthy vs Falsy</div>
+
+<div class="card-body">
+<p>Every value in JS can be treated as true or false in an <code>if</code> statement.</p>
+
+<div class="grid grid-cols-2 gap-4 mt-3">
+<div class="bg-red-50 p-4 rounded border border-red-200"><strong class="text-red-700">Falsy Values (Counts as false)</strong>
+
+<ul class="list-disc ml-5 mt-2 text-sm text-red-900">
+	<li><code>false</code></li>
+	<li><code>0</code> (Zero)</li>
+	<li><code>&quot;&quot;</code> (Empty string)</li>
+	<li><code>null</code></li>
+	<li><code>undefined</code></li>
+	<li><code>NaN</code> (Not a Number)</li>
+</ul>
+</div>
+
+<div class="bg-green-50 p-4 rounded border border-green-200"><strong class="text-green-700">Truthy Values (Counts as true)</strong>
+
+<p class="mt-2 text-sm text-green-900">Everything else!</p>
+
+<ul class="list-disc ml-5 mt-2 text-sm text-green-900">
+	<li><code>&quot;Hello&quot;</code></li>
+	<li><code>42</code>, <code>-1</code></li>
+	<li><code>[]</code>, <code>{}</code> (Arrays/Objects)</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
